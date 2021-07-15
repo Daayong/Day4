@@ -68,9 +68,10 @@ public class homework {
 		//게임 시작
 		//보유 골드 선언
 		int gold=0;
+		int tgold=0;
 		int lev=1;
 		
-		
+		 
 		if(!flag) {
 			System.out.println("====GAME START====");
 		
@@ -96,8 +97,9 @@ public class homework {
 				}
 				//골드 보상
 				if((lev+1)%5==0) {
-					gold=gold+1000;
+					gold=(lev+1)/5*1000;
 					System.out.println("보상!"+gold+"골드 획득");
+					tgold=gold+gold;
 				}
 				if(lev !=14) {
 				System.out.println("==============");
@@ -106,24 +108,9 @@ public class homework {
 			
 			System.out.println("===GAME FINISH===");
 			System.out.println("최종 "+lev+" 레벨 달성!");
-			System.out.println("최종 획득 Gold : " +gold );
+			System.out.println("최종 획득 Gold : " + tgold );
 		}//if문 종료
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
 	
 	}
 }
